@@ -1,4 +1,5 @@
 function tile(x, y) {
+  push();
   translate(x, y);
   let trans = 255;
   let pink = color(245, 0, 79, trans);
@@ -7,18 +8,18 @@ function tile(x, y) {
   let magenta = color(255, 0, 255, trans);
 
   //top triangle
-  push();
+  //push();
   noStroke();
   fill(purple);
   triangle(12, 12, 0, 0, 24, 0);
-  pop();
+  //pop();
 
   //bottom triangle
-  push();
+  //push();
   noStroke();
   fill(purple);
   triangle(12, 12, 24, 24, 0, 24);
-  pop();
+ // pop();
 
   //circle
   push();
@@ -30,18 +31,18 @@ function tile(x, y) {
   pop();
 
   //right triangle
-  push();
+  //push();
   noStroke();
   fill(pink);
   triangle(12, 12, 24, 0, 24, 24);
-  pop();
+  //pop();
 
   //left triangle
-  push();
+  //push();
   noStroke();
   fill(pink);
   triangle(12, 12, 0, 24, 0, 0);
-  pop();
+  //pop();
 
   //middle rings
   push();
@@ -53,6 +54,17 @@ function tile(x, y) {
   for (let d = 8; d < 24; d += 5) {
     ellipse(0, 0, d);
   }
+
+  pop();
+
+  // push();
+  // rectMode(CENTER)
+  // stroke(magenta);
+  // strokeWeight(3);
+  // noFill();
+  // blendMode(DIFFERENCE);
+  // rect(12, 12, 21, 21);
+  // pop();
   pop();
 }
 
